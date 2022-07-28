@@ -36,6 +36,13 @@ module.exports = {
     "linebreak-style": ["error", "unix"],
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useRecoilCallback"
+      }
+    ],
     "@typescript-eslint/no-unused-vars": [
       "error",
       { vars: "all", args: "after-used", ignoreRestSiblings: false },
