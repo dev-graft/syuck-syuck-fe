@@ -1,12 +1,14 @@
 import React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Button from "./components/Button/Button";
+import { RecoilRoot } from 'recoil';
 
 const App = () => {
+  const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
-  return <button>버튼</button>;
+      <RecoilRoot>
         <button>버튼</button>
+      </RecoilRoot>
     </QueryClientProvider>
   );
 };
