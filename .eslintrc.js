@@ -14,8 +14,6 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "airbnb-typescript",
-    "airbnb/hooks",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
