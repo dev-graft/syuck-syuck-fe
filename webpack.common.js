@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require('dotenv-webpack');
 
 const isProduction = process.env.NODE_ENV === "production";
 
@@ -30,6 +31,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{ from: "static" }],
     }),
+    new Dotenv(),
     isProduction &&
       new MiniCSSExtractPlugin({
         filename: "[name].css",
