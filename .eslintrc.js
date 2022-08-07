@@ -29,7 +29,12 @@ module.exports = {
   rules: {
     indent: ["error", 2],
     "no-empty": "warn",
-    "no-console": "warn",
+    "import/no-unresolved": "off",
+    "linebreak-style": 0,
+    "no-console": [
+      "warn",
+      { "allow": ["clear", "info", "error", "dir", "trace", "log"] }
+     ], 
     "no-unused-vars": "off",
     "linebreak-style": ["error", "unix"],
     "react/jsx-uses-react": "off",
@@ -45,7 +50,7 @@ module.exports = {
       "error",
       { vars: "all", args: "after-used", ignoreRestSiblings: false },
     ],
-    "@typescript-eslint/explicit-function-return-type": "warn", // Consider using explicit annotations for object literals and function return types even when they can be inferred.
+    "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
