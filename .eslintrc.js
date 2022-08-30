@@ -37,6 +37,8 @@ module.exports = {
      ], 
     "no-unused-vars": "off",
     "linebreak-style": ["error", "unix"],
+    "react/prop-types": "off",
+    "react/display-name": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
