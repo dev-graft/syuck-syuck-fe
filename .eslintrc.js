@@ -47,8 +47,7 @@ module.exports = {
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error",
-      { vars: "all", args: "after-used", ignoreRestSiblings: false },
+      2,{"args": "none"}
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/naming-convention": [
