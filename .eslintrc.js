@@ -37,6 +37,8 @@ module.exports = {
      ], 
     "no-unused-vars": "off",
     "linebreak-style": ["error", "unix"],
+    "react/prop-types": "off",
+    "react/display-name": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
@@ -47,8 +49,7 @@ module.exports = {
       }
     ],
     "@typescript-eslint/no-unused-vars": [
-      "error",
-      { vars: "all", args: "after-used", ignoreRestSiblings: false },
+      2,{"args": "none"}
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/naming-convention": [
