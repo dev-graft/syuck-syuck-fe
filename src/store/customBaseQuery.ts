@@ -39,7 +39,7 @@ export const customFetchBase: BaseQueryFn<string | FetchArgs, unknown, FetchBase
           // api.dispatch(tokenReceived(refreshResult.data));
           result = await baseQuery(args, api, extraOptions);
         } else {
-          api.dispatch(logout());
+          // api.dispatch(logout());
           window.location.href = '/login';
         }
       } finally {
