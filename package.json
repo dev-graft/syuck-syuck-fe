@@ -17,7 +17,7 @@
     "dev": "NODE_ENV=development webpack-dev-server --config webpack.dev.js",
     "start": "NODE_ENV=production webpack-dev-server --config webpack.prod.js",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "lint": "eslint 'src/**/*.ts'",
+    "lint": "eslint --fix .",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -73,3 +73,4 @@
     "webpack-merge": "^5.8.0"
   }
 }
+

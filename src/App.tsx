@@ -10,17 +10,27 @@ const AppWrapper = styled.div`
   align-items: center;
   height: 100vh;
 `;
+
 const LoginWrapper = styled.div`
+  display: flex;
+  justify-content: center;
   background-color: #fbfbfb;
+  border: 1px solid #d4d4d4;
+  border-radius: 20px;
+  width: 626px;
+  height: 600px;
+`;
+
+const LoginContent = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 626px;
-  height: 600px;
-  border: 1px solid #d4d4d4;
-  border-radius: 20px;
+  max-width: 360px;
+  height: 100%;
+  width: 100%;
 `;
+
 
 const LoginTitle = styled.span`
   width: 297px;
@@ -65,16 +75,40 @@ const Divider = styled.hr`
   background-color: rgba(134, 134, 134, 0.5);
 `;
 
+const CheckboxLabelWrappwer = styled.span`
+  display: flex;
+  margin-bottom: 10px;
+`
+const Checkbox = styled.input`
+  height: 24px;
+  width: 24px;
+`;
+
+const CheckboxLabel = styled.label`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 const App = () => {
   return (
     <AppWrapper>
       <LoginWrapper>
-        <LoginTitle>Syuck-Syuck</LoginTitle>
-        <Input placeholder="아이디" />
-        <Input placeholder="비밀번호" />
-        <Button>Login</Button>
-        <Divider />
-        <GoogleLogin />
+        <LoginContent>
+          <LoginTitle>Syuck-Syuck</LoginTitle>
+          <Input placeholder="아이디" />
+          <Input placeholder="비밀번호" />
+          <div style={{display: 'flex', justifyContent:'space-between', alignItems: 'center', width: '100%'}}>
+            <CheckboxLabelWrappwer>
+              <Checkbox id="saveID" name="saveID" type="checkbox" />
+              <CheckboxLabel htmlFor='saveID'>아이디 저장</CheckboxLabel>
+            </CheckboxLabelWrappwer>
+            <span>회원가입</span>
+          </div>
+          <Button>Login</Button>
+          <Divider />
+          <GoogleLogin />
+        </LoginContent>
       </LoginWrapper>
     </AppWrapper>
   );

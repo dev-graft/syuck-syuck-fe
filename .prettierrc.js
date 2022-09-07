@@ -14,5 +14,6 @@ module.exports = {
   "requirePragma": false,
   "insertPragma": false,
   "proseWrap": "preserve",
-  "vueIndentScriptAndStyle": false
+  "vueIndentScriptAndStyle": false,
+  "endOfLine": "crlf",
 }

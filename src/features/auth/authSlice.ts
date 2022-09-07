@@ -1,15 +1,5 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { RootState } from "@/store/rootReducer";
-import { Auth } from "./Auth.interface";
-
-// const initialState: Auth = {
-//   user: localStorage.getItem("user") || "",
-//   isError: false,
-//   isSuccess: false,
-//   isLoading: false,
-//   accessToken: localStorage.getItem("accessToken") || "",
-// };
 
 interface IUser {
   id: string;
@@ -33,7 +23,6 @@ const authSlice = createSlice({
       state.user = action.payload;
     },
   },
-  extraReducers: () => {},
 });
 
 export const { login, logout } = authSlice.actions;

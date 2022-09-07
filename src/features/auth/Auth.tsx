@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { Auth } from "./Auth.interface";
+import { Auth } from './Auth.interface';
 
 const Auth = () => {
   return <div>Auth</div>;
