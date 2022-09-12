@@ -36,7 +36,6 @@ module.exports = {
     indent: ["error", 2],
     "no-empty": "warn",
     "import/no-unresolved": "off",
-    "linebreak-style": 0,
     "no-console": [
       "warn",
       { "allow": ["clear", "info", "error", "dir", "trace", "log"] }
