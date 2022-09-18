@@ -12,12 +12,13 @@ import { Mutex } from 'async-mutex';
 
 console.log(process.env.NODE_ENV);
 
-const baseUrl =
+const baseUrl: string | undefined =
   process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_BASEURL : process.env.REACT_APP_PROD_BASEURL;
 
 console.log('production? ', process.env.NODE_ENV === 'production');
 console.log('url = ', baseUrl);
 
+if (baseUrl === undefined) alert('baseUrl확인');
 const mutex = new Mutex();
 const baseQuery = fetchBaseQuery({ baseUrl: `${baseUrl}/portal/api/` });
 
@@ -55,3 +56,4 @@ export const customFetchBase: BaseQueryFn<string | FetchArgs, unknown, FetchBase
 };
 
 export default customFetchBase;
+
