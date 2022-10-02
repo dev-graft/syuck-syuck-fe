@@ -9,10 +9,9 @@ const isProduction = process.env.NODE_ENV === "production";
 module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
-    /* alias를 사용할 경우 주석을 해제하고 사용한다. */
-    // alias: {
-    //   "@components": path.resolve(__dirname, "src/components"),
-    // },
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
   entry: {
     app: "./src/index.tsx",
@@ -60,7 +59,6 @@ module.exports = {
         use: [
           isProduction ? MiniCSSExtractPlugin.loader : "style-loader",
           "css-loader",
-          "postcss-loader",
           "sass-loader",
         ],
       },
