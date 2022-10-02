@@ -14,6 +14,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/typescript",
     "prettier",
   ],
   settings: {
@@ -53,9 +54,7 @@ module.exports = {
         "additionalHooks": "useRecoilCallback"
       }
     ],
-    "@typescript-eslint/no-unused-vars": [
-      2,{"args": "none"}
-    ],
+    "@typescript-eslint/no-unused-vars": 'off',
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/naming-convention": [
       "error",
