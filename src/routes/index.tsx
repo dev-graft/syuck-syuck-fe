@@ -1,13 +1,21 @@
-import { Route, Routes } from 'react-router-dom';
-import Login
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter , Routes, Route } from 'react-router-dom';
 
-const index = () => {
-  return (
-    <Routes>
-      <Route path="" element={</>}></Route>
-    </Routes>
-  );
-};
+import Login from '@/features/auth/Login'
+import SignUp from '@/features/auth/SignUp'
 
-export default index;
+
+const Router = () => {
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/>} />
+        <Route path="/signup" element={<SignUp/>} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+
+export default Router;
 
