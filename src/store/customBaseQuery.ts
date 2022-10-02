@@ -11,16 +11,15 @@ import { Mutex } from 'async-mutex';
 // import { logout } from '../features/auth';
 
 console.log(process.env.NODE_ENV);
-
-const baseUrl: string | undefined =
-  process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_BASEURL : process.env.REACT_APP_PROD_BASEURL;
+const baseUrl = '';
+process.env.NODE_ENV === 'development' ? process.env.REACT_APP_DEV_BASEURL : process.env.REACT_APP_PROD_BASEURL;
 
 console.log('production? ', process.env.NODE_ENV === 'production');
 console.log('url = ', baseUrl);
 
 if (baseUrl === undefined) alert('baseUrl확인');
 const mutex = new Mutex();
-const baseQuery = fetchBaseQuery({ baseUrl: `${baseUrl}/portal/api/` });
+const baseQuery = fetchBaseQuery({ baseUrl: `${baseUrl}/api/` });
 
 export const customFetchBase: BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError> = async (
   args,
