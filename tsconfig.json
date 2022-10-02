@@ -12,11 +12,10 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
+    "baseUrl": ".",
     "paths": {
-      "@components/*": ["./components/*"],
-      "@features/*": ["./features/*"],
-      "@utils/*": ["./utils/*"]
-    }
+      "@/*": ["src/*"]
+    },
   },
   "include": ["src"]
 }
