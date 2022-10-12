@@ -3,6 +3,7 @@
 - React
 - Webpack
 - TypeScript
-- Redux Toolkit + RTK query
+- React-Query
+- Recoil
 - ESlint / Prettier
 - storybook
