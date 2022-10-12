@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Router from './routes';
 import { ThemeProvider } from '@emotion/react';
+import { RecoilRoot } from 'recoil';
 
 const theme = {
   colors: {
@@ -15,7 +16,9 @@ const App = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Router />
+      <RecoilRoot>
+        <Router />
+      </RecoilRoot>
     </ThemeProvider>
   );
 };
