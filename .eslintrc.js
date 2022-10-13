@@ -39,7 +39,7 @@ module.exports = {
     'import/no-unresolved': 'off',
     'no-console': ['warn', { allow: ['clear', 'info', 'error', 'dir', 'trace', 'log'] }],
     'no-unused-vars': 'off',
-    'linebreak-style': ['error', 'unix'],
+    'linebreak-style': ['error', process.platform === 'win32' ? 'windows' : 'unix'],
     'react/prop-types': 'off',
     'react/display-name': 'off',
     'react/jsx-uses-react': 'off',
