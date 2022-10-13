@@ -4,6 +4,7 @@ import { ThemeProvider } from '@emotion/react';
 import { RecoilRoot } from 'recoil';
 
 import Router from './routes';
+import GlobalStyle from '@/styles/GlobalStyle';
 import { theme } from '@/styles/theme';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <RecoilRoot>
+        <GlobalStyle />
         <Router />
       </RecoilRoot>
     </ThemeProvider>
