@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Router from './routes';
+
 import { ThemeProvider } from '@emotion/react';
 import { RecoilRoot } from 'recoil';
+
+import Router from './routes';
 
 const theme = {
   colors: {

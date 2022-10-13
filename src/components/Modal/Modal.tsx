@@ -1,4 +1,5 @@
 import { useEffect, useRef, ReactNode } from 'react';
+
 import { createPortal } from 'react-dom';
 
 const modalRoot = document.querySelector('#modal-root') as HTMLElement;

@@ -1,8 +1,10 @@
 import React from 'react';
+
 // eslint-disable-next-line import/no-unresolved
-import GoogleLogin from './GoogleLogin';
 import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
+
+import GoogleLogin from './GoogleLogin';
 // import GoogleLogout from './features/auth/GoogleLogout';
 
 const AppWrapper = styled.div`
@@ -78,7 +80,7 @@ const Divider = styled.hr`
 const CheckboxLabelWrappwer = styled.span`
   display: flex;
   margin-bottom: 10px;
-`
+`;
 const Checkbox = styled.input`
   height: 24px;
   width: 24px;
@@ -91,31 +93,35 @@ const CheckboxLabel = styled.label`
 `;
 
 const Login = () => {
-  const navigate =  useNavigate();
+  const navigate = useNavigate();
   const handledSignup = () => {
-    navigate('/signup')
-  }
+    navigate('/signup');
+  };
 
   return (
     <AppWrapper>
       <LoginWrapper>
         <LoginContent>
-          <LoginTitle>Syuck-Syuck</LoginTitle>
+          <LoginTitle></LoginTitle>
           <Input placeholder="아이디" />
           <Input placeholder="비밀번호" />
-          <div style={{display: 'flex', justifyContent:'space-between', alignItems: 'center', width: '100%'}}>
+          <input type="text" placeholder="hello" />
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <CheckboxLabelWrappwer>
               <Checkbox id="saveID" name="saveID" type="checkbox" />
-              <CheckboxLabel htmlFor='saveID'>아이디 저장</CheckboxLabel>
+              <CheckboxLabel htmlFor="saveID">아이디 저장</CheckboxLabel>
             </CheckboxLabelWrappwer>
-            <button type="button" onClick={handledSignup}>회원가입</button>
+            <button type="button" onClick={handledSignup}>
+              회원가입
+            </button>
           </div>
           <Button>Login</Button>
           <Divider />
-          <GoogleLogin />
+          {/* <GoogleLogin /> */}
         </LoginContent>
       </LoginWrapper>
     </AppWrapper>
   );
 };
 export default Login;
+

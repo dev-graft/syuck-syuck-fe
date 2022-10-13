@@ -1,11 +1,12 @@
 import React from 'react';
+
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { URL } from '@/constants/url';
 import Login from '@/features/auth/Login';
 import SignUp from '@/features/auth/SignUp';
 
-import { URL } from '@/constants/url';
 
 const Router = () => {
   return (
