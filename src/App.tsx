@@ -4,12 +4,7 @@ import { ThemeProvider } from '@emotion/react';
 import { RecoilRoot } from 'recoil';
 
 import Router from './routes';
-
-const theme = {
-  colors: {
-    primary: 'hotpink',
-  },
-};
+import { theme } from '@/styles/theme';
 
 const App = () => {
   //   const customization = useAppSelector(
@@ -26,4 +21,3 @@ const App = () => {
 };
 
 export default App;
-
