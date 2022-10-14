@@ -5,6 +5,8 @@ import styled from '@emotion/styled';
 import { useNavigate } from 'react-router-dom';
 
 import GoogleLogin from './GoogleLogin';
+import { Input } from '@/components/Input';
+
 // import GoogleLogout from './features/auth/GoogleLogout';
 
 const AppWrapper = styled.div`
@@ -41,19 +43,6 @@ const LoginTitle = styled.span`
   font-weight: 700;
   font-size: 45px;
   color: #003550;
-  border-radius: 8px;
-`;
-
-const Input = styled.input`
-  height: 35px;
-  width: 328px;
-  padding: 12px 16px;
-  margin-bottom: 20px;
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  background-color: #eaeaea;
-  border: none;
   border-radius: 8px;
 `;
 
@@ -105,7 +94,6 @@ const Login = () => {
           <LoginTitle></LoginTitle>
           <Input placeholder="아이디" />
           <Input placeholder="비밀번호" />
-          <input type="text" placeholder="hello" />
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <CheckboxLabelWrappwer>
               <Checkbox id="saveID" name="saveID" type="checkbox" />
@@ -124,4 +112,3 @@ const Login = () => {
   );
 };
 export default Login;
-
