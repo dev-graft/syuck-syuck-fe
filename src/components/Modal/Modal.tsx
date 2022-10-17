@@ -9,19 +9,20 @@ interface ModalProps {
 }
 
 const Modal = ({ children }: ModalProps) => {
-  const el = useRef(document.createElement('div'));
+  const elRef = useRef<HTMLDivElement | null>(null);
+  if (!elRef.current) {
+    elRef.current = document.createElement('div');
+  }
+  const el = elRef.current;
 
   useEffect(() => {
-    const current = el.current;
-
-    modalRoot.appendChild(current);
+    modalRoot.appendChild(el);
     return () => {
-      void modalRoot.removeChild(current);
+      modalRoot.removeChild(el);
     };
-  }, []);
+  }, [el]);
 
-  return createPortal(children, el.current);
+  return createPortal(children, el);
 };
 
 export default Modal;
-
